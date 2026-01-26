@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Payment {
 
-  private long id;
-  private double value;
+    private long id;
+    private double value;
 }

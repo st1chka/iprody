@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class PaymentService {
 
-  public Payment getPayment() {
-    return new Payment(1, 3.5);
-  }
+    public Payment getPayment() {
+        return new Payment(1, 3.5);
+    }
 }

@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/payments")
 public class PaymentController {
 
-  private final PaymentService paymentService;
+    private final PaymentService paymentService;
 
-  @GetMapping
-  public Payment getPayment() {
-    return paymentService.getPayment();
-  }
+    @GetMapping
+    public Payment getPayment() {
+        return paymentService.getPayment();
+    }
 }

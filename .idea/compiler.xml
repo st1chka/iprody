@@ -17,14 +17,16 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
         </processorPath>
         <module name="payment-service-app (2)" />
+        <module name="payment-service-app" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="payment-service-app" target="21" />
+      <module name="payment-service-app (2)" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="payment-service-app" options="-parameters" />
       <module name="payment-service-app (2)" options="-parameters" />
     </option>
   </component>
