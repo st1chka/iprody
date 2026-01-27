@@ -9,5 +9,8 @@
         <module name="simple-http-server" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="payment-service-app" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>
