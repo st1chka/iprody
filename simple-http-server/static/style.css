@@ -16,7 +16,7 @@ h1 {
   margin-bottom: 30px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-left: 5px solid #3498db; /* синяя полоска слева */
 }
 
@@ -27,7 +27,7 @@ p {
   border-radius: 8px;
   max-width: 600px;
   margin: 0 auto 20px auto;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Эффект при наведении на параграф */
