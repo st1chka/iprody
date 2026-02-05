@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   payment-service-app:
-    build: .
+    build: ./payment-service-app
     image: payment-service-app
     container_name: payment-app
     ports:
