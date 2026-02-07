@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+  <include file="07_02_2026/DDL/db.changelog-1.0-create-payment.sql"
+    relativeToChangelogFile="true"/>
+  <include file="07_02_2026/DML/db.changelog-1.1-add-demo-payment.sql"
+    relativeToChangelogFile="true"/>
+
+</databaseChangeLog>
