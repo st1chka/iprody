@@ -18,12 +18,12 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
-@Table(name = "payment")
+@Table(name = "payments")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Payment {
+public class Payments {
 
     @Id
     @Column(name = "guid", nullable = false, unique = true)
