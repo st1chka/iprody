@@ -1,5 +1,6 @@
+-- liquibase formatted sql
 -- changeset kalinin:1.1-insert-demo-payment
--- comment: Insert demo payment row for development/testing
+-- preConditions onFail:MARK_RAN
 INSERT INTO payments (guid,
                       inquiry_ref_id,
                       amount,
@@ -9,14 +10,14 @@ INSERT INTO payments (guid,
                       note,
                       created_at,
                       updated_at)
-VALUES ('ac328a1a-1e60-4dd3-bee5-ed573d74c841',
-        '607ed0ea-cb8a-4ff8-a694-1213c314e65c',
-        99.99,
-        'USD',
-        'f113e373-b7b0-4f38-abf6-ccc3a89b8236',
-        'RECEIVED',
-        'Initial test payment',
-        '2025-01-01 12:00:00+00',
-        '2025-01-01 12:00:00+00');
-
--- rollback DELETE FROM payments WHERE guid = 'ac328a1a-1e60-4dd3-bee5-ed573d74c841';
+SELECT
+    uuid_in(md5('payment-' || i || '-guid')::cstring),
+    uuid_in(md5('payment-' || i || '-inquiry')::cstring),
+    (50 + random() * 300)::numeric(5,2),
+        (ARRAY['USD','EUR','GBP','CAD','JPY','CHF','AUD'])[(mod(i-1, 7) + 1)],
+    uuid_in(md5('payment-' || i || '-transaction')::cstring),
+    (ARRAY['RECEIVED','PENDING','DECLINED','APPROVED','NOT_SENT'])[(mod(i-1, 5) + 1)],
+    'Payment ' || i || ' for testing',
+    NOW() - (i || ' days')::interval,
+    NOW() - (i || ' days')::interval
+FROM generate_series(1, 15) AS i;
