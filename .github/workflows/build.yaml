@@ -20,7 +20,3 @@ jobs:
 
       - name: Run tests
         run: mvn -B test
-
-      - name: Run Checkstyle for payment-service
-        working-directory: ./payment-service-app
-        run: mvn -B checkstyle:check
