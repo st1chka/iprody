@@ -5,6 +5,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.math.BigDecimal;
@@ -27,6 +29,7 @@ public class Payments {
 
     @Id
     @Column(name = "guid", nullable = false, unique = true)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID guid;
 
     @Column(name = "inquiry_ref_id", nullable = false)
