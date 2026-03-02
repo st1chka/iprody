@@ -30,6 +30,7 @@ public class PaymentDTO {
     private OffsetDateTime createdAt;
 
     private OffsetDateTime updatedAt;
+
     public PaymentStatus getStatusEnum() {
         return PaymentStatus.valueOf(status.toUpperCase());
     }
