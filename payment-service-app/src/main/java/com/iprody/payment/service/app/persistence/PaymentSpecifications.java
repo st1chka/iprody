@@ -1,9 +1,10 @@
 package com.iprody.payment.service.app.persistence;
 
 import com.iprody.payment.service.app.entity.Payments;
+import org.springframework.data.jpa.domain.Specification;
+
 import java.math.BigDecimal;
 import java.time.Instant;
-import org.springframework.data.jpa.domain.Specification;
 
 public final class PaymentSpecifications {
 
